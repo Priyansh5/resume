@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Target Not Found</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="404">
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <main class="err-wrap">
+    <div class="err-code">404</div>
+    <div class="err-term"><span class="p">$ nmap -sV</span> /priyansh-bhadoria.dev<span class="p">/this-page</span></div>
+    <div class="err-msg">host seems down... this page is either firewalled or never existed.</div>
+    <div class="err-actions">
+      <a href="index.html" class="btn btn-primary">return to base</a>
+      <a href="disclosures.html" class="btn btn-ghost">exploit the disclosures instead</a>
+      <a href="contact.html" class="btn btn-ghost">report the bug</a>
+    </div>
+  </main>
+
+  <button class="terminal-fab" id="terminal-fab" aria-label="Open interactive terminal">&gt;_</button>
+  <div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+    <div class="terminal-panel">
+      <div class="terminal-head">
+        <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
+        <span class="terminal-title">priyansh@portfolio: ~ — bash</span>
+        <button class="terminal-close" id="terminal-close" aria-label="Close terminal">✕</button>
+      </div>
+      <div class="terminal-body" id="terminal-body" aria-live="polite"></div>
+      <div class="terminal-input-row">
+        <span class="t-prompt">priyansh@portfolio:~$</span>
+        <input class="terminal-input" id="terminal-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="type 'help'...">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/backgrounds.js"></script>
+  <script src="js/transition.js"></script>
+  <script src="js/glitch.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Research &amp; Disclosures — Priyansh Bhadoria</title>
+  <meta name="description" content="9 responsibly disclosed vulnerabilities across Air France-KLM, IHK München, Bose, NewCold & Gummicube (Airship) via HackerOne, Zerocopter and direct VDP. 2× Security Hall of Fame.">
+  <meta property="og:title" content="Security Research — Priyansh Bhadoria">
+  <meta property="og:description" content="9 disclosures across Air France-KLM, Bose, IHK München, NewCold & Gummicube (Airship). 2× Hall of Fame.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="disclosures">
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home"><span class="logo-prompt">&gt;_</span>priyansh<span class="cursor" aria-hidden="true"></span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">home</a></li>
+        <li><a href="disclosures.html" data-nav="disclosures">disclosures</a></li>
+        <li><a href="projects.html" data-nav="projects">projects</a></li>
+        <li><a href="about.html" data-nav="about">about</a></li>
+        <li><a href="blog.html" data-nav="blog">blog</a></li>
+        <li><a href="contact.html" data-nav="contact">contact</a></li>
+      </ul>
+      <button class="terminal-btn" id="terminal-open">&gt;_ terminal</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">~ <span class="crumb-accent">/disclosures</span></div>
+        <h1 class="page-title">Security <span class="grad">research</span></h1>
+        <p class="page-sub">Independent vulnerability research &amp; coordinated disclosure with global enterprises. Every finding reported responsibly through HackerOne, Zerocopter and direct VDPs — full writeups on <a href="blog.html">my blog</a>.</p>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+
+        <!-- HALL OF FAME -->
+        <div class="glass-card hof-banner reveal">
+          <div class="hof-trophy">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+          </div>
+          <div>
+            <div class="hof-title">Security Hall of Fame — ×2</div>
+            <div class="hof-sub">Recognized by <strong>Bose</strong> for Adobe AEM &amp; SAP Hybris research (HackerOne VDP) and by <strong>Airship</strong> for the Gummicube Reflected XSS disclosure (direct VDP) — publicly listed twice for responsible security research.</div>
+          </div>
+        </div>
+
+        <!-- AIR FRANCE-KLM -->
+        <article class="glass-card disclosure-card reveal" id="air-france-klm">
+          <div class="disclosure-head">
+            <div>
+              <h2 class="company-name">Air France-KLM</h2>
+              <div class="company-meta">
+                <span class="badge badge-muted">Zerocopter CVD</span>
+                <span class="badge badge-info">Identity &amp; Access Management</span>
+                <span class="badge badge-green">3 findings</span>
+                <span class="badge badge-muted">Jul 2026 · Remote</span>
+              </div>
+            </div>
+            <span class="badge badge-critical">CRITICAL · verified</span>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Default credentials on Keycloak IAM server</span>
+                <span class="badge badge-critical">CRITICAL</span>
+              </div>
+              <p class="finding-desc">Identified a default-credential misconfiguration on a public-facing enterprise IAM server (<code>Keycloak v12.0.3</code>) enabling unauthorized administrative access to a production platform. Responsibly disclosed to the vendor and verified as <strong>Critical severity</strong>.</p>
+            </div>
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Exposed OIDC client secret in PingFederate FedHub SSO</span>
+                <span class="badge badge-high">HIGH</span>
+              </div>
+              <p class="finding-desc">Discovered an exposed OIDC client secret in the corporate <code>PingFederate FedHub</code> SSO system, enabling cross-system authentication bypass potential. Reported with a proof-of-concept for remediation.</p>
+            </div>
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Keycloak redirect URI information disclosure</span>
+                <span class="badge badge-muted">INFO</span>
+              </div>
+              <p class="finding-desc">Information-disclosure flaw in Keycloak client redirect URI configurations exposing internal network topology details. Reported for remediation.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- IHK MÜNCHEN -->
+        <article class="glass-card disclosure-card reveal" id="ihk-muenchen">
+          <div class="disclosure-head">
+            <div>
+              <h2 class="company-name">IHK München</h2>
+              <div class="company-meta">
+                <span class="badge badge-muted">VDP</span>
+                <span class="badge badge-info">Cloud &amp; Identity Security · Azure</span>
+                <span class="badge badge-green">1 finding</span>
+                <span class="badge badge-muted">Jun 2026 · Remote</span>
+              </div>
+            </div>
+            <span class="badge badge-high">HIGH · PoC confirmed</span>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Azure SignalR authentication bypass</span>
+                <span class="badge badge-high">HIGH</span>
+              </div>
+              <p class="finding-desc">Discovered an authentication bypass in a Microsoft Teams integration utilizing <code>Azure SignalR Service</code>. Demonstrated via a Python proof-of-concept that spoofing the <code>x-ms-signalr-userid</code> header could yield valid JWTs and authenticated WebSocket sessions as arbitrary users.</p>
+              <div class="finding-outcomes">
+                <span class="badge badge-green">reproduced &amp; confirmed by org's security team</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BOSE -->
+        <article class="glass-card disclosure-card reveal" id="bose">
+          <div class="disclosure-head">
+            <div>
+              <h2 class="company-name">Bose Corporation</h2>
+              <div class="company-meta">
+                <span class="badge badge-muted">HackerOne VDP</span>
+                <span class="badge badge-info">Enterprise Security · Adobe AEM &amp; SAP Hybris</span>
+                <span class="badge badge-green">2 findings</span>
+                <span class="badge badge-muted">Mar 2026 · Remote</span>
+              </div>
+            </div>
+            <span class="badge badge-gold">★ HALL OF FAME</span>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Adobe AEM Sling JSON selector information disclosure</span>
+                <span class="badge badge-high">HIGH</span>
+              </div>
+              <p class="finding-desc">Information-disclosure vulnerability in <code>Adobe AEM Sling JSON selectors</code> exposing internal configurations and metadata across <strong>9 international locales</strong>. Responsibly disclosed — and listed on <strong>Bose's Security Hall of Fame</strong>.</p>
+            </div>
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">SAP Hybris ATP API access control bypass</span>
+                <span class="badge badge-high">HIGH</span>
+              </div>
+              <p class="finding-desc">Discovered an access control bypass in the <code>SAP Hybris ATP API</code> where URI path manipulation (<code>users/admin</code>) forced unauthorized catalog context resolution without role validation. Reported for remediation.</p>
+            </div>
+          </div>
+          <div class="finding-outcomes" style="margin-top: 16px;">
+            <span class="badge badge-gold">★ Bose Security Hall of Fame</span>
+            <span class="badge badge-muted">Java stack-trace analysis → mapped Spring Security filter chain (OAuth2, Basic Auth)</span>
+          </div>
+        </article>
+
+        <!-- NEWCOLD -->
+        <article class="glass-card disclosure-card reveal" id="newcold">
+          <div class="disclosure-head">
+            <div>
+              <h2 class="company-name">NewCold</h2>
+              <div class="company-meta">
+                <span class="badge badge-muted">Zerocopter</span>
+                <span class="badge badge-info">Web Application &amp; API Security</span>
+                <span class="badge badge-green">2 findings</span>
+                <span class="badge badge-muted">May 2026 · Remote</span>
+              </div>
+            </div>
+            <span class="badge badge-green">$ BOUNTY AWARDED</span>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Unauthenticated WordPress REST API access — PII exposure</span>
+                <span class="badge badge-high">HIGH</span>
+              </div>
+              <p class="finding-desc">Unauthenticated access flaw in <code>WordPress REST API</code> custom post endpoints exposing customer submissions containing <strong>PII</strong> (500+ records). Responsibly disclosed and <strong>awarded a bounty</strong>.</p>
+            </div>
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Exposed Next.js source maps — undocumented APIs &amp; cloud credentials</span>
+                <span class="badge badge-high">HIGH</span>
+              </div>
+              <p class="finding-desc">Exposed <code>Next.js Source Map</code> files bypassing production minification. Source-code analysis revealed undocumented API endpoints and improperly exposed cloud credentials — reported immediately for remediation.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- GUMMICUBE (AIRSHIP) -->
+        <article class="glass-card disclosure-card reveal" id="gummicube">
+          <div class="disclosure-head">
+            <div>
+              <h2 class="company-name">Gummicube <span style="color: var(--text-muted); font-weight: 500; font-size: 18px;">(Airship)</span></h2>
+              <div class="company-meta">
+                <span class="badge badge-muted">Airship VDP · direct</span>
+                <span class="badge badge-info">Web Application Security · XSS</span>
+                <span class="badge badge-green">1 finding</span>
+                <span class="badge badge-muted">May 2026 · Remote</span>
+              </div>
+            </div>
+            <span class="badge badge-gold">★ HALL OF FAME</span>
+          </div>
+
+          <div class="findings">
+            <div class="finding">
+              <div class="finding-top">
+                <span class="finding-title">Reflected XSS in blog search — four reflection contexts</span>
+                <span class="badge badge-high">HIGH</span>
+              </div>
+              <p class="finding-desc">The blog search on <code>www.gummicube.com/blog/search/&lt;term&gt;/</code> reflected user input without output encoding in <strong>four distinct contexts</strong>: the page <code>&lt;title&gt;</code>, Open Graph &amp; Twitter Card meta descriptions, JSON-LD structured data (injected via <code>dangerouslySetInnerHTML</code>) and visible page content. A crafted URL carrying <code>test&quot;&gt;&lt;script&gt;alert(document.domain)&lt;/script&gt;</code> broke out of the existing HTML context and executed arbitrary JavaScript in the victim's browser — demonstrated with curl evidence showing the raw injected script tag in the HTTP response.</p>
+              <p class="finding-desc" style="margin-top: 10px;">Impact: session cookie/token theft enabling <strong>account takeover</strong>, attacker-driven actions as the victim, phishing redirects and page defacement — particularly serious because Gummicube's contact forms collect personal data (name, email, company, app details) that a crafted link could capture from employees and customers.</p>
+              <div class="finding-outcomes">
+                <span class="badge badge-green">confirmed &amp; addressed by the Airship Security Team</span>
+                <span class="badge badge-muted">curl PoC — raw script injection in the HTTP response</span>
+                <span class="badge badge-muted">fix: context-aware output encoding + safe JSON-LD serialization</span>
+              </div>
+            </div>
+          </div>
+          <div class="finding-outcomes" style="margin-top: 16px;">
+            <span class="badge badge-gold">★ Airship Vulnerability Disclosure Hall of Fame</span>
+            <span class="badge badge-muted">reported may 11 2026 → recognized may 22 2026</span>
+          </div>
+        </article>
+
+        <div class="glass-card reveal" style="text-align:center; padding: 40px 30px;">
+          <div class="section-kicker" style="justify-content:center;">./responsible_disclosure.policy</div>
+          <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto 24px;">Every vulnerability on this page was discovered through authorized coordinated-disclosure programs, reported privately, and validated with proof-of-concepts before remediation. No exploit details are published beyond what vendors have approved.</p>
+          <a href="blog.html" class="btn btn-primary">read the full writeups</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="fl-accent">&gt;_</span> priyansh bhadoria · <span id="footer-year">2026</span><br>
+        <span style="color: var(--text-faint); font-size: 12px;">vanilla html/css/js · zero trackers · deployed on github pages</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Priyansh5" target="_blank" rel="noopener">github</a>
+        <a href="https://linkedin.com/in/priyansh-bhadoria" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://medium.com/@priyanshbhadoria5" target="_blank" rel="noopener">medium</a>
+        <a href="https://tryhackme.com/p/DEKU." target="_blank" rel="noopener">tryhackme</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="terminal-fab" id="terminal-fab" aria-label="Open interactive terminal">&gt;_</button>
+  <div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+    <div class="terminal-panel">
+      <div class="terminal-head">
+        <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
+        <span class="terminal-title">priyansh@portfolio: ~ — bash</span>
+        <button class="terminal-close" id="terminal-close" aria-label="Close terminal">✕</button>
+      </div>
+      <div class="terminal-body" id="terminal-body" aria-live="polite"></div>
+      <div class="terminal-input-row">
+        <span class="t-prompt">priyansh@portfolio:~$</span>
+        <input class="terminal-input" id="terminal-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="type 'help'...">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/backgrounds.js"></script>
+  <script src="js/transition.js"></script>
+  <script src="js/glitch.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

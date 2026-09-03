@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyansh Bhadoria — Security Analyst &amp; Penetration Tester</title>
+  <meta name="description" content="Cybersecurity graduate & vulnerability researcher. 9 responsible disclosures across Air France-KLM, Bose, IHK München, NewCold & Gummicube (Airship) via HackerOne/Zerocopter/direct VDP. 2× Security Hall of Fame. TryHackMe Top 9%.">
+  <meta property="og:title" content="Priyansh Bhadoria — Security Analyst &amp; Penetration Tester">
+  <meta property="og:description" content="9 responsible disclosures across Air France-KLM, Bose, IHK München, NewCold & Gummicube (Airship). 2× Security Hall of Fame. TryHackMe Top 9%.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home"><span class="logo-prompt">&gt;_</span>priyansh<span class="cursor" aria-hidden="true"></span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">home</a></li>
+        <li><a href="disclosures.html" data-nav="disclosures">disclosures</a></li>
+        <li><a href="projects.html" data-nav="projects">projects</a></li>
+        <li><a href="about.html" data-nav="about">about</a></li>
+        <li><a href="blog.html" data-nav="blog">blog</a></li>
+        <li><a href="contact.html" data-nav="contact">contact</a></li>
+      </ul>
+      <button class="terminal-btn" id="terminal-open">&gt;_ terminal</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas id="particles-canvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-glow-2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-status reveal visible">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          open to work · security analyst / junior pentester
+        </div>
+        <h1 class="hero-name reveal visible">Priyansh <span class="grad">Bhadoria</span></h1>
+        <p class="hero-typing reveal visible" aria-label="Roles">
+          <span class="prompt-sign">~/ $</span> <span id="typing-text">Security Analyst</span><span class="type-cursor" aria-hidden="true"></span>
+        </p>
+        <p class="hero-tagline reveal visible">
+          I break enterprise systems — <strong>responsibly</strong>. 9 vulnerabilities disclosed across
+          <strong>Air&nbsp;France-KLM</strong>, <strong>Bose</strong>, <strong>IHK&nbsp;München</strong>,
+          <strong>NewCold</strong> &amp; <strong>Gummicube&nbsp;(Airship)</strong> through HackerOne, Zerocopter &amp; direct VDPs.
+        </p>
+        <div class="hero-actions reveal visible">
+          <a href="disclosures.html" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+            view disclosures
+          </a>
+          <a href="assets/Priyansh_Bhadoria_Resume.pdf" download class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17V3"/><path d="m6 11 6 6 6-6"/><path d="M19 21H5"/></svg>
+            download resume
+          </a>
+        </div>
+        <div class="hero-socials reveal visible">
+          <a class="social-chip" href="https://github.com/Priyansh5" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span>github/Priyansh5</span>
+          </a>
+          <a class="social-chip" href="https://linkedin.com/in/priyansh-bhadoria" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            <span>in/priyansh-bhadoria</span>
+          </a>
+          <a class="social-chip" href="https://medium.com/@priyanshbhadoria5" target="_blank" rel="noopener" aria-label="Medium">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.82-3.38 6.82-1.87 0-3.38-3.07-3.38-6.82s1.51-6.82 3.38-6.82S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75S24 8.83 24 12z"/></svg>
+            <span>@priyanshbhadoria5</span>
+          </a>
+          <a class="social-chip" href="https://tryhackme.com/p/DEKU." target="_blank" rel="noopener" aria-label="TryHackMe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+            <span>thm/DEKU. · top 9%</span>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">scroll</div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="section-sm" aria-label="Key statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="glass-card stat-card reveal"><div class="stat-value" data-count="5">0</div><div class="stat-label">global enterprises tested</div></div>
+          <div class="glass-card stat-card reveal reveal-d1"><div class="stat-value" data-count="9">0</div><div class="stat-label">vulnerabilities disclosed</div></div>
+          <div class="glass-card stat-card reveal reveal-d2"><div class="stat-value" data-count="766">0</div><div class="stat-label">accounts exposed &amp; secured</div></div>
+          <div class="glass-card stat-card reveal"><div class="stat-value" data-count="500" data-suffix="+">0</div><div class="stat-label">customer records protected</div></div>
+          <div class="glass-card stat-card reveal reveal-d1"><div class="stat-value" data-count="9" data-prefix="top " data-suffix="%">0</div><div class="stat-label">tryhackme global rank</div></div>
+          <div class="glass-card stat-card reveal reveal-d2"><div class="stat-value" data-count="2">0</div><div class="stat-label">security hall of fames</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED DISCLOSURES ============ -->
+    <section class="section" aria-label="Featured security research">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">01 · security_research</div>
+          <h2 class="section-title">Bugs found in <span class="grad">global enterprises</span></h2>
+          <p class="section-sub">Coordinated vulnerability disclosure via HackerOne, Zerocopter &amp; direct VDPs — every finding responsibly reported, verified and remediated.</p>
+        </div>
+
+        <div class="blog-grid" style="margin-bottom: 34px;">
+          <article class="glass-card blog-card reveal">
+            <div class="blog-meta">
+              <span class="badge badge-critical">CRITICAL · verified</span>
+              <span class="badge badge-muted">Zerocopter CVD</span>
+            </div>
+            <h3 class="blog-title">Air France-KLM</h3>
+            <p class="blog-excerpt">Default credentials on a public-facing Keycloak IAM server (<code style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">v12.0.3</code>) granted unauthorized admin access to a production platform — plus exposed OIDC client secrets in PingFederate SSO.</p>
+            <a class="blog-link" href="disclosures.html#air-france-klm">full breakdown</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d1">
+            <div class="blog-meta">
+              <span class="badge badge-high">HIGH · PoC confirmed</span>
+              <span class="badge badge-muted">VDP</span>
+            </div>
+            <h3 class="blog-title">IHK München</h3>
+            <p class="blog-excerpt">Authentication bypass in a Microsoft Teams integration — spoofing the <code style="font-family:var(--font-mono);font-size:12px;color:var(--accent);">x-ms-signalr-userid</code> header yielded valid JWTs &amp; WebSocket sessions as arbitrary users. Reproduced with a Python PoC.</p>
+            <a class="blog-link" href="disclosures.html#ihk-muenchen">full breakdown</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d2">
+            <div class="blog-meta">
+              <span class="badge badge-gold">★ HALL OF FAME</span>
+              <span class="badge badge-muted">HackerOne VDP</span>
+            </div>
+            <h3 class="blog-title">Bose Corporation</h3>
+            <p class="blog-excerpt">Adobe AEM Sling JSON selectors leaked internal configurations across 9 international locales, and a SAP Hybris API access-control bypass forced unauthorized catalog resolution. Listed on Bose's Security Hall of Fame.</p>
+            <a class="blog-link" href="disclosures.html#bose">full breakdown</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d3">
+            <div class="blog-meta">
+              <span class="badge badge-green">$ BOUNTY AWARDED</span>
+              <span class="badge badge-muted">Zerocopter</span>
+            </div>
+            <h3 class="blog-title">NewCold</h3>
+            <p class="blog-excerpt">Unauthenticated WordPress REST API endpoints exposed customer submissions containing PII, and exposed Next.js source maps revealed undocumented APIs + cloud credentials. Awarded a bounty.</p>
+            <a class="blog-link" href="disclosures.html#newcold">full breakdown</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d4" style="grid-column: 1 / -1;">
+            <div class="blog-meta">
+              <span class="badge badge-gold">★ HALL OF FAME</span>
+              <span class="badge badge-muted">Airship VDP</span>
+              <span class="badge badge-muted">latest research · may 2026</span>
+            </div>
+            <h3 class="blog-title">Gummicube (Airship)</h3>
+            <p class="blog-excerpt">Reflected XSS in the blog search — user input echoed unencoded into the page title, OG/Twitter meta, JSON-LD &amp; body content. A crafted URL executed arbitrary JavaScript; listed on <strong>Airship's VDP Hall of Fame</strong>.</p>
+            <a class="blog-link" href="disclosures.html#gummicube">full breakdown</a>
+          </article>
+        </div>
+
+        <div style="text-align:center;">
+          <a href="disclosures.html" class="btn btn-ghost">
+            view all 9 disclosures
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECTS ============ -->
+    <section class="section" aria-label="Featured projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-kicker">02 · open_source_tooling</div>
+          <h2 class="section-title">Security <span class="grad">tooling</span> I build</h2>
+          <p class="section-sub">Python-built offensive &amp; defensive tools — recon, log analysis, network forensics and ML-based intrusion detection.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="glass-card project-card reveal">
+            <div class="project-top">
+              <div>
+                <h3 class="project-name">AI-Powered NIDS</h3>
+                <div class="project-date">Python · Machine Learning</div>
+              </div>
+              <div class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div>
+            </div>
+            <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">ML</span><span class="tech-chip">Scapy</span></div>
+            <p class="project-desc">Network intrusion detection system that applies machine-learning models to classify malicious traffic patterns in real time.</p>
+          </article>
+
+          <article class="glass-card project-card reveal reveal-d1">
+            <div class="project-top">
+              <div>
+                <h3 class="project-name">Android Log Monitor</h3>
+                <div class="project-date">Nov 2025 – Dec 2025</div>
+              </div>
+              <div class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
+            </div>
+            <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">PyQt6</span><span class="tech-chip">ADB</span></div>
+            <p class="project-desc">Cross-platform desktop app for real-time Android logcat monitoring — regex filtering, PID tracking, timeline visualization &amp; multi-threaded parsing for mobile forensics.</p>
+          </article>
+
+          <article class="glass-card project-card reveal reveal-d2">
+            <div class="project-top">
+              <div>
+                <h3 class="project-name">CyberShield Toolkit</h3>
+                <div class="project-date">Jan 2025 – Jun 2025</div>
+              </div>
+              <div class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+            </div>
+            <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Scapy</span><span class="tech-chip">SSL/TLS</span></div>
+            <p class="project-desc">4-module security toolkit: subdomain enumeration, network scanning, SSL/TLS auditing &amp; multi-threaded password analysis for ZIP/PDF files.</p>
+          </article>
+
+          <article class="glass-card project-card reveal reveal-d3">
+            <div class="project-top">
+              <div>
+                <h3 class="project-name">Log Analyzer</h3>
+                <div class="project-date">Nov 2024 – Jan 2025</div>
+              </div>
+              <div class="project-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></div>
+            </div>
+            <div class="tech-chips"><span class="tech-chip">Python</span><span class="tech-chip">Matplotlib</span><span class="tech-chip">Regex</span></div>
+            <p class="project-desc">Security log parser for Apache/Nginx with a SQLi &amp; XSS threat-detection engine, visual dashboards and SIEM-ready JSON exports.</p>
+          </article>
+        </div>
+
+        <div style="text-align:center; margin-top: 34px;">
+          <a href="projects.html" class="btn btn-ghost">
+            explore all projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section" aria-label="Call to action">
+      <div class="container">
+        <div class="glass-card reveal" style="text-align:center; padding: 54px 34px;">
+          <div class="section-kicker" style="justify-content:center;">./initiate_contact.sh</div>
+          <h2 class="section-title" style="margin-bottom: 14px;">Let's secure something <span class="grad">together</span></h2>
+          <p class="section-sub" style="margin: 0 auto 30px;">Looking for a Security Analyst or Junior Penetration Tester who has already found real bugs in real enterprises? Get in touch.</p>
+          <div class="hero-actions" style="margin: 0;">
+            <a href="contact.html" class="btn btn-primary">contact me</a>
+            <button class="btn btn-ghost copy-btn" data-copy="priyanshbhadoria5@gmail.com" style="padding: 13px 26px; font-size: 14.5px; border-radius: 12px;">copy email</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="fl-accent">&gt;_</span> priyansh bhadoria · <span id="footer-year">2026</span><br>
+        <span style="color: var(--text-faint); font-size: 12px;">vanilla html/css/js · zero trackers · deployed on github pages</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Priyansh5" target="_blank" rel="noopener">github</a>
+        <a href="https://linkedin.com/in/priyansh-bhadoria" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://medium.com/@priyanshbhadoria5" target="_blank" rel="noopener">medium</a>
+        <a href="https://tryhackme.com/p/DEKU." target="_blank" rel="noopener">tryhackme</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ TERMINAL ============ -->
+  <button class="terminal-fab" id="terminal-fab" aria-label="Open interactive terminal">&gt;_</button>
+  <div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+    <div class="terminal-panel">
+      <div class="terminal-head">
+        <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
+        <span class="terminal-title">priyansh@portfolio: ~ — bash</span>
+        <button class="terminal-close" id="terminal-close" aria-label="Close terminal">✕</button>
+      </div>
+      <div class="terminal-body" id="terminal-body" aria-live="polite"></div>
+      <div class="terminal-input-row">
+        <span class="t-prompt">priyansh@portfolio:~$</span>
+        <input class="terminal-input" id="terminal-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="type 'help'...">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/backgrounds.js"></script>
+  <script src="js/transition.js"></script>
+  <script src="js/glitch.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

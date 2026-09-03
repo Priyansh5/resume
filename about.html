@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Priyansh Bhadoria</title>
+  <meta name="description" content="Cybersecurity graduate with hands-on pentesting & vulnerability research experience. Google Cybersecurity Professional Certificate. B.Tech CSE. Timeline, certifications & skills.">
+  <meta property="og:title" content="About — Priyansh Bhadoria">
+  <meta property="og:description" content="whoami: security analyst, bug bounty hunter, tool builder.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home"><span class="logo-prompt">&gt;_</span>priyansh<span class="cursor" aria-hidden="true"></span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">home</a></li>
+        <li><a href="disclosures.html" data-nav="disclosures">disclosures</a></li>
+        <li><a href="projects.html" data-nav="projects">projects</a></li>
+        <li><a href="about.html" data-nav="about">about</a></li>
+        <li><a href="blog.html" data-nav="blog">blog</a></li>
+        <li><a href="contact.html" data-nav="contact">contact</a></li>
+      </ul>
+      <button class="terminal-btn" id="terminal-open">&gt;_ terminal</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">~ <span class="crumb-accent">/about</span></div>
+        <h1 class="page-title"><span class="grad">$ whoami</span></h1>
+        <p class="page-sub">Cybersecurity graduate with hands-on penetration testing and vulnerability research experience earned through coordinated disclosure with global enterprises.</p>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+
+        <!-- intro -->
+        <div class="glass-card reveal" style="margin-bottom: 46px;">
+          <div class="section-kicker">./profile.md</div>
+          <p style="font-size: 17px; line-height: 1.85; color: var(--text);">
+            I'm a security analyst who learns by breaking things — <strong style="color: var(--accent);">responsibly</strong>.
+            My research has surfaced real vulnerabilities in production systems at <strong>Air France-KLM</strong>, <strong>Bose</strong>,
+            <strong>IHK München</strong>, <strong>NewCold</strong> and <strong>Gummicube (Airship)</strong> through HackerOne, Zerocopter and direct VDP disclosure — including a
+            <strong>verified Critical</strong> in an enterprise IAM deployment, an <strong>authentication bypass in Azure SignalR</strong> confirmed with a Python proof-of-concept, and a <strong>multi-context Reflected XSS</strong> on Gummicube recognized with a second Hall of Fame listing.
+          </p>
+          <p style="margin-top: 16px; color: var(--text-muted); line-height: 1.85;">
+            I specialize in web application security, cloud identity (Azure, AWS), IAM/SSO attack surfaces like Keycloak and PingFederate, and building custom Python tooling for log analysis and digital forensics. Alongside my research, I've completed two cybersecurity internships — at IBM SkillsBuild and Redynox — applying OWASP Top 10 methodology, protocol-layer traffic analysis, and security automation. I'm a Google Cybersecurity Professional Certificate holder, ranked in the <strong style="color: var(--text);">top 9% on TryHackMe</strong>, and currently seeking a <strong style="color: var(--text);">Security Analyst or Junior Penetration Tester</strong> role where proven vulnerability discovery translates into real impact.
+          </p>
+          <div style="display:flex; gap: 10px; flex-wrap: wrap; margin-top: 22px;">
+            <span class="badge badge-green">● open to work</span>
+            <span class="badge badge-info">SOC / offensive security</span>
+            <span class="badge badge-muted">open to relocation</span>
+          </div>
+        </div>
+
+        <!-- timeline -->
+        <div class="section-head reveal">
+          <div class="section-kicker">01 · journey.log</div>
+          <h2 class="section-title">Experience <span class="grad">timeline</span></h2>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <div class="timeline-date">Jul 2026 · Remote</div>
+            <div class="timeline-role">Independent Security Researcher</div>
+            <div class="timeline-org">Air France-KLM — Zerocopter CVD</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Critical (verified) default-credential misconfiguration on a public-facing Keycloak v12.0.3 IAM server — unauthorized admin access to production.</li>
+                <li>Exposed OIDC client secret in PingFederate FedHub SSO; Keycloak redirect URI info disclosure.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 2026 · Remote</div>
+            <div class="timeline-role">Independent Security Researcher</div>
+            <div class="timeline-org">IHK München — VDP</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Authentication bypass in a Microsoft Teams integration using Azure SignalR — spoofed x-ms-signalr-userid header yielded valid JWTs &amp; WebSockets as arbitrary users (Python PoC, confirmed).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">May 2026 · Remote</div>
+            <div class="timeline-role">Independent Security Researcher</div>
+            <div class="timeline-org">NewCold — Zerocopter</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Unauthenticated WordPress REST API access exposing customer PII — <strong style="color: var(--accent);">bounty awarded</strong>.</li>
+                <li>Exposed Next.js source maps revealing undocumented API endpoints &amp; cloud credentials.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">May 2026 · Remote</div>
+            <div class="timeline-role">Independent Security Researcher</div>
+            <div class="timeline-org">Gummicube — Airship VDP</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Reflected XSS in the blog search on www.gummicube.com — user input reflected unencoded across the page title, OG/Twitter meta tags, JSON-LD structured data &amp; body content, proven with a curl PoC.</li>
+                <li>Confirmed &amp; addressed by the Airship Security Team — listed on the <strong style="color: var(--gold);">Airship VDP Hall of Fame</strong>.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Mar 2026 · Remote</div>
+            <div class="timeline-role">Independent Security Researcher</div>
+            <div class="timeline-org">Bose Corporation — HackerOne VDP</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Adobe AEM Sling JSON selector info disclosure across 9 locales; SAP Hybris ATP API access-control bypass.</li>
+                <li>Listed on <strong style="color: var(--gold);">Bose Security Hall of Fame</strong>.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2025 · Remote</div>
+            <div class="timeline-role">Cybersecurity Intern</div>
+            <div class="timeline-org">Redynox (The Red Users)</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Protocol-layer traffic analysis with Wireshark — cleartext credentials over HTTP, anomalous DNS patterns, TCP session irregularities; documented as annotated PCAP reports.</li>
+                <li>OWASP Top 10 exploitation methodology in a controlled lab, mapping SQLi, XSS &amp; CSRF attack chains end-to-end with CVSS v3 ratings.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jan 2025 – Feb 2025 · Remote</div>
+            <div class="timeline-role">Cybersecurity Intern</div>
+            <div class="timeline-org">IBM SkillsBuild (via Edunet Foundation)</div>
+            <div class="timeline-desc">
+              <ul>
+                <li>Engineered a Python security log parser (Apache/Nginx) detecting SQLi &amp; XSS signatures, with Matplotlib threat dashboards and SIEM-ready JSON exports.</li>
+                <li>Applied threat modeling &amp; incident response frameworks across network security, vulnerability management and GRC; validated findings with OWASP ZAP.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- education -->
+        <div class="section-head reveal" style="margin-top: 80px;">
+          <div class="section-kicker">02 · education/</div>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="edu-grid">
+          <div class="glass-card cert-card reveal">
+            <div class="cert-org">teerthanker mahaveer university</div>
+            <div class="cert-name">B.Tech — Computer Science Engineering</div>
+            <div class="cert-date">2022 – 2025 · Moradabad, UP</div>
+          </div>
+          <div class="glass-card cert-card reveal reveal-d1">
+            <div class="cert-org">teerthanker mahaveer university</div>
+            <div class="cert-name">Diploma — Electrical &amp; Electronics Engineering</div>
+            <div class="cert-date">2019 – 2022 · Moradabad, UP</div>
+          </div>
+        </div>
+
+        <!-- certifications -->
+        <div class="section-head reveal" style="margin-top: 80px;">
+          <div class="section-kicker">03 · certs/</div>
+          <h2 class="section-title">Certifications</h2>
+        </div>
+
+        <div class="certs-grid">
+          <div class="glass-card cert-card reveal">
+            <div class="cert-org">coursera</div>
+            <div class="cert-name">Google Cybersecurity Professional Certificate</div>
+            <div class="cert-date">✓ completed aug 2025</div>
+          </div>
+          <div class="glass-card cert-card reveal reveal-d1">
+            <div class="cert-org">the tech unique academy</div>
+            <div class="cert-name">The Tech Unique Cybersecurity Professional</div>
+            <div class="cert-date">✓ jul 2025</div>
+          </div>
+          <div class="glass-card cert-card reveal reveal-d2">
+            <div class="cert-org">letsupgrade · nsdc</div>
+            <div class="cert-name">Cybersecurity &amp; Ethical Hacking Bootcamp</div>
+            <div class="cert-date">✓ aug 2024</div>
+          </div>
+        </div>
+
+        <!-- skills -->
+        <div class="section-head reveal" style="margin-top: 80px;">
+          <div class="section-kicker">04 · arsenal.json</div>
+          <h2 class="section-title">Technical <span class="grad">arsenal</span></h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="glass-card reveal">
+            <div class="skill-group-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              languages
+            </div>
+            <div class="skill-chips">
+              <span class="tech-chip">Python</span><span class="tech-chip">JavaScript</span><span class="tech-chip">HTML</span><span class="tech-chip">Bash</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal reveal-d1">
+            <div class="skill-group-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+              security tools
+            </div>
+            <div class="skill-chips">
+              <span class="tech-chip">Burp Suite</span><span class="tech-chip">Nmap</span><span class="tech-chip">Wireshark</span><span class="tech-chip">Metasploit</span><span class="tech-chip">OWASP ZAP</span><span class="tech-chip">Scapy</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal reveal-d2">
+            <div class="skill-group-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+              platforms &amp; cloud
+            </div>
+            <div class="skill-chips">
+              <span class="tech-chip">Linux</span><span class="tech-chip">Kali Linux</span><span class="tech-chip">Windows</span><span class="tech-chip">Azure</span><span class="tech-chip">AWS</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal reveal-d3">
+            <div class="skill-group-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m22 2-5.25 5.25"/><path d="M8.5 12l2.5 2.5 4.5-4.5"/><path d="M2 12h3M19 12h3M12 2v3M12 19v3"/></svg>
+              security domains
+            </div>
+            <div class="skill-chips">
+              <span class="tech-chip">Web App Security</span><span class="tech-chip">VAPT</span><span class="tech-chip">Fuzzing</span><span class="tech-chip">Network Security</span><span class="tech-chip">OSINT</span><span class="tech-chip">Log Analysis</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal reveal-d4">
+            <div class="skill-group-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>
+              identity &amp; access
+            </div>
+            <div class="skill-chips">
+              <span class="tech-chip">IAM / SSO</span><span class="tech-chip">Keycloak</span><span class="tech-chip">PingFederate</span><span class="tech-chip">OAuth2 / OIDC</span><span class="tech-chip">Azure SignalR</span>
+            </div>
+          </div>
+
+          <div class="glass-card reveal">
+            <div class="skill-group-head">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+              always learning
+            </div>
+            <div class="skill-chips">
+              <span class="tech-chip">TryHackMe Top 9%</span><span class="tech-chip">CTFs</span><span class="tech-chip">Digital Forensics</span><span class="tech-chip">SIEM Pipelines</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="fl-accent">&gt;_</span> priyansh bhadoria · <span id="footer-year">2026</span><br>
+        <span style="color: var(--text-faint); font-size: 12px;">vanilla html/css/js · zero trackers · deployed on github pages</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Priyansh5" target="_blank" rel="noopener">github</a>
+        <a href="https://linkedin.com/in/priyansh-bhadoria" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://medium.com/@priyanshbhadoria5" target="_blank" rel="noopener">medium</a>
+        <a href="https://tryhackme.com/p/DEKU." target="_blank" rel="noopener">tryhackme</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="terminal-fab" id="terminal-fab" aria-label="Open interactive terminal">&gt;_</button>
+  <div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+    <div class="terminal-panel">
+      <div class="terminal-head">
+        <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
+        <span class="terminal-title">priyansh@portfolio: ~ — bash</span>
+        <button class="terminal-close" id="terminal-close" aria-label="Close terminal">✕</button>
+      </div>
+      <div class="terminal-body" id="terminal-body" aria-live="polite"></div>
+      <div class="terminal-input-row">
+        <span class="t-prompt">priyansh@portfolio:~$</span>
+        <input class="terminal-input" id="terminal-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="type 'help'...">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/backgrounds.js"></script>
+  <script src="js/transition.js"></script>
+  <script src="js/glitch.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writeups — Priyansh Bhadoria</title>
+  <meta name="description" content="Bug bounty writeups & security research stories by Priyansh Bhadoria — OAuth chains, Keycloak default credentials, enterprise SSO bypasses and more.">
+  <meta property="og:title" content="Writeups — Priyansh Bhadoria">
+  <meta property="og:description" content="Bug bounty writeups: auth bypasses, PII leaks, SSO takeovers.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="blog">
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home"><span class="logo-prompt">&gt;_</span>priyansh<span class="cursor" aria-hidden="true"></span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav="home">home</a></li>
+        <li><a href="disclosures.html" data-nav="disclosures">disclosures</a></li>
+        <li><a href="projects.html" data-nav="projects">projects</a></li>
+        <li><a href="about.html" data-nav="about">about</a></li>
+        <li><a href="blog.html" data-nav="blog">blog</a></li>
+        <li><a href="contact.html" data-nav="contact">contact</a></li>
+      </ul>
+      <button class="terminal-btn" id="terminal-open">&gt;_ terminal</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">~ <span class="crumb-accent">/writeups</span></div>
+        <h1 class="page-title">Field <span class="grad">notes</span></h1>
+        <p class="page-sub">Full bug bounty writeups — the recon, the dead ends and the exact moment an enterprise system said "ok". Published on <a href="https://medium.com/@priyanshbhadoria5" target="_blank" rel="noopener">Medium</a> &amp; <a href="https://infosecwriteups.com" target="_blank" rel="noopener">InfoSec Writeups</a>.</p>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="feed-toolbar reveal">
+          <div class="feed-status" id="feed-status"><span class="fs-dot"></span><span class="fs-text">checking medium feed…</span></div>
+          <button class="feed-refresh" id="feed-refresh" title="Re-sync the Medium feed now" aria-label="Re-sync the Medium feed now">
+            <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>sync
+          </button>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+
+          <article class="glass-card blog-card reveal">
+            <div class="blog-meta">
+              <span class="badge badge-muted">MEDIUM</span>
+              <span class="blog-date">aug 20, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@priyanshbhadoria5/authentication-vs-authorization-how-a-misconfigured-oauth-chain-led-to-an-auth-bypass-b14d1c0d402a" target="_blank" rel="noopener">Authentication vs. Authorization: How a Misconfigured OAuth Chain Led to an Auth Bypass</a></h2>
+            <p class="blog-excerpt">When you look at a bug bounty scope with massive enterprise root domains, it's easy to get overwhelmed. Most hunters fire off automated scanners and move on — but the most critical vulnerabilities hide in the cloud authentication layer of an SPA that looks impenetrable at first glance.</p>
+            <div class="blog-cats"><span class="tech-chip">bug-bounty</span><span class="tech-chip">oauth</span><span class="tech-chip">auth-bypass</span></div>
+            <a class="blog-link" href="https://medium.com/@priyanshbhadoria5/authentication-vs-authorization-how-a-misconfigured-oauth-chain-led-to-an-auth-bypass-b14d1c0d402a" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d1">
+            <div class="blog-meta">
+              <span class="badge badge-muted">MEDIUM</span>
+              <span class="blog-date">aug 4, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@priyanshbhadoria5/the-frontend-lied-how-a-free-account-could-delete-production-api-specs-on-an-airlines-developer-4085f4093aeb" target="_blank" rel="noopener">The Frontend Lied: How a Free Account Could Delete Production API Specs on an Airline's Developer Portal</a></h2>
+            <p class="blog-excerpt">A trust-boundary failure where the client-side was the only thing standing between a free-tier account and destructive operations on a production developer portal.</p>
+            <div class="blog-cats"><span class="tech-chip">bug-bounty</span><span class="tech-chip">api-security</span><span class="tech-chip">airline</span></div>
+            <a class="blog-link" href="https://medium.com/@priyanshbhadoria5/the-frontend-lied-how-a-free-account-could-delete-production-api-specs-on-an-airlines-developer-4085f4093aeb" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d2">
+            <div class="blog-meta">
+              <span class="badge badge-muted">MEDIUM</span>
+              <span class="blog-date">jul 26, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@priyanshbhadoria5/admin-admin123-how-default-keycloak-credentials-on-a-cargo-training-environment-exposed-766-f026dcf45023" target="_blank" rel="noopener">admin:admin123 — How Default Keycloak Credentials Exposed 766 Accounts on a Cargo Training Environment</a></h2>
+            <p class="blog-excerpt">Default credentials are the oldest vulnerability in the book. Every hardening guide says change the default password — yet a public-facing enterprise IAM server still shipped with them, exposing 766 accounts.</p>
+            <div class="blog-cats"><span class="tech-chip">keycloak</span><span class="tech-chip">iam</span><span class="tech-chip">critical</span></div>
+            <a class="blog-link" href="https://medium.com/@priyanshbhadoria5/admin-admin123-how-default-keycloak-credentials-on-a-cargo-training-environment-exposed-766-f026dcf45023" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d3">
+            <div class="blog-meta">
+              <span class="badge badge-info">INFOSEC WRITEUPS</span>
+              <span class="blog-date">jun 29, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://infosecwriteups.com/bypassing-enterprise-sso-via-a-forgotten-source-map-a-bug-bounty-story-a43ab0973146" target="_blank" rel="noopener">Bypassing Enterprise SSO via a Forgotten Source Map: A Bug Bounty Story</a></h2>
+            <p class="blog-excerpt">A forgotten build artifact — a single exposed source map — leaked enough application logic to defeat an enterprise single sign-on flow end to end.</p>
+            <div class="blog-cats"><span class="tech-chip">sso</span><span class="tech-chip">source-maps</span><span class="tech-chip">recon</span></div>
+            <a class="blog-link" href="https://infosecwriteups.com/bypassing-enterprise-sso-via-a-forgotten-source-map-a-bug-bounty-story-a43ab0973146" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+          <article class="glass-card blog-card reveal">
+            <div class="blog-meta">
+              <span class="badge badge-muted">MEDIUM</span>
+              <span class="blog-date">jun 6, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@priyanshbhadoria5/2-years-of-p5s-sleepless-nights-and-finally-making-it-to-a-hall-of-fame-b43144bdaa48" target="_blank" rel="noopener">2 Years of P5s, Sleepless Nights, and Finally Making it to a Hall of Fame</a></h2>
+            <p class="blog-excerpt">I have always lived by one specific philosophy: "I'll learn it when I have it, or I'll learn it when the time comes." This is the story of grinding from informational findings to a Bose Hall of Fame listing.</p>
+            <div class="blog-cats"><span class="tech-chip">journey</span><span class="tech-chip">hall-of-fame</span><span class="tech-chip">mindset</span></div>
+            <a class="blog-link" href="https://medium.com/@priyanshbhadoria5/2-years-of-p5s-sleepless-nights-and-finally-making-it-to-a-hall-of-fame-b43144bdaa48" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d1">
+            <div class="blog-meta">
+              <span class="badge badge-muted">MEDIUM</span>
+              <span class="blog-date">may 23, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@priyanshbhadoria5/hunting-for-bugs-when-the-low-hanging-fruit-is-forbidden-a-deep-dive-into-finding-reflected-xss-8d52f058ad78" target="_blank" rel="noopener">Hunting for Bugs When the Low-Hanging Fruit is Forbidden: A Deep Dive into Finding Reflected XSS</a></h2>
+            <p class="blog-excerpt">Bug bounty is often romanticized as running automated scanners and collecting bounties. But what happens when the target explicitly forbids reporting the exact vulnerability classes your scanners find?</p>
+            <div class="blog-cats"><span class="tech-chip">xss</span><span class="tech-chip">methodology</span><span class="tech-chip">deep-dive</span></div>
+            <a class="blog-link" href="https://medium.com/@priyanshbhadoria5/hunting-for-bugs-when-the-low-hanging-fruit-is-forbidden-a-deep-dive-into-finding-reflected-xss-8d52f058ad78" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d2">
+            <div class="blog-meta">
+              <span class="badge badge-muted">MEDIUM</span>
+              <span class="blog-date">may 20, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://medium.com/@priyanshbhadoria5/bypassing-the-frontend-obfuscation-how-i-uncovered-a-companys-entire-internal-architecture-da95e27668c9" target="_blank" rel="noopener">Bypassing the Frontend Obfuscation: How I Uncovered a Company's Entire Internal Architecture</a></h2>
+            <p class="blog-excerpt">As bug bounty hunters, we are trained to find the chink in the armor. But what happens when the target has no visible cracks? Peeling obfuscated frontend layers revealed the whole internal map.</p>
+            <div class="blog-cats"><span class="tech-chip">obfuscation</span><span class="tech-chip">info-disclosure</span><span class="tech-chip">recon</span></div>
+            <a class="blog-link" href="https://medium.com/@priyanshbhadoria5/bypassing-the-frontend-obfuscation-how-i-uncovered-a-companys-entire-internal-architecture-da95e27668c9" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+          <article class="glass-card blog-card reveal reveal-d3">
+            <div class="blog-meta">
+              <span class="badge badge-info">INFOSEC WRITEUPS</span>
+              <span class="blog-date">may 16, 2026</span>
+            </div>
+            <h2 class="blog-title"><a href="https://infosecwriteups.com/the-bug-that-almost-wasnt-how-a-dead-end-led-to-500-leaked-customer-records-18db26e53705" target="_blank" rel="noopener">The Bug That Almost Wasn't: How a "Dead End" Led to 500+ Leaked Customer Records</a></h2>
+            <p class="blog-excerpt">What looked like an unauthenticated WordPress endpoint nobody cared about turned into 500+ customer records and a bounty. The lesson: dead ends are only dead if you stop digging.</p>
+            <div class="blog-cats"><span class="tech-chip">wordpress</span><span class="tech-chip">pii</span><span class="tech-chip">bounty</span></div>
+            <a class="blog-link" href="https://infosecwriteups.com/the-bug-that-almost-wasnt-how-a-dead-end-led-to-500-leaked-customer-records-18db26e53705" target="_blank" rel="noopener">read writeup</a>
+          </article>
+
+        </div>
+
+        <div class="glass-card reveal" style="text-align:center; padding: 40px 30px; margin-top: 30px;">
+          <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 22px;">New writeup every time an enterprise says "valid, fixing now". Follow along.</p>
+          <a class="btn btn-primary" href="https://medium.com/@priyanshbhadoria5" target="_blank" rel="noopener">follow on medium</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="fl-accent">&gt;_</span> priyansh bhadoria · <span id="footer-year">2026</span><br>
+        <span style="color: var(--text-faint); font-size: 12px;">vanilla html/css/js · zero trackers · deployed on github pages</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Priyansh5" target="_blank" rel="noopener">github</a>
+        <a href="https://linkedin.com/in/priyansh-bhadoria" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://medium.com/@priyanshbhadoria5" target="_blank" rel="noopener">medium</a>
+        <a href="https://tryhackme.com/p/DEKU." target="_blank" rel="noopener">tryhackme</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="terminal-fab" id="terminal-fab" aria-label="Open interactive terminal">&gt;_</button>
+  <div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Interactive terminal">
+    <div class="terminal-panel">
+      <div class="terminal-head">
+        <span class="t-dot t-dot-r"></span><span class="t-dot t-dot-y"></span><span class="t-dot t-dot-g"></span>
+        <span class="terminal-title">priyansh@portfolio: ~ — bash</span>
+        <button class="terminal-close" id="terminal-close" aria-label="Close terminal">✕</button>
+      </div>
+      <div class="terminal-body" id="terminal-body" aria-live="polite"></div>
+      <div class="terminal-input-row">
+        <span class="t-prompt">priyansh@portfolio:~$</span>
+        <input class="terminal-input" id="terminal-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="type 'help'...">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/backgrounds.js"></script>
+  <script src="js/transition.js"></script>
+  <script src="js/glitch.js"></script>
+  <script src="js/medium-feed.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
